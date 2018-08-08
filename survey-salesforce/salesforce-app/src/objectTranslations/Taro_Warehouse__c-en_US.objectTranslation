@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Taro Warehouse</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Taro Warehouses</value>
+    </caseValues>
+    <fields>
+        <label><!-- Taro Location --></label>
+        <name>Taro_Location__c</name>
+        <relationshipLabel><!-- Taro Warehouses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Taro Warehouse ID --></label>
+        <name>Taro_Warehouse_ID__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Inventory Adjustment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Inventory Adjustments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Adjustment Qty --></label>
+        <name>Adjustment_Qty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjustment Reason --></label>
+        <name>Adjustment_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Product Damaged</masterLabel>
+            <translation>Product Damaged</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Found</masterLabel>
+            <translation>Product Found</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Lost</masterLabel>
+            <translation>Product Lost</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received Incorrect Quantities</masterLabel>
+            <translation>Received Incorrect Quantities</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason (Cycle Count) --></label>
+        <name>Cycle_Count_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Test 1</masterLabel>
+            <translation>Test 1</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date of Adjustment --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inventory --></label>
+        <name>Inventory__c</name>
+        <relationshipLabel><!-- Inventory Adjustments --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <label><!-- Cycle Count --></label>
+        <name>Cycle_Count</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Inventory Adjustment --></label>
+        <name>Inventory_Adjustment</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

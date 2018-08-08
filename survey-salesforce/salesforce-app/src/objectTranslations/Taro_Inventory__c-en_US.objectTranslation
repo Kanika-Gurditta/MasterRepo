@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Taro Inventory</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Taro Inventory</value>
+    </caseValues>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Taro Inventory --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The quantity physically in stock that has not already been committed on a Confirmed outbound Order. --></help>
+        <label><!-- Qty Available --></label>
+        <name>Qty_Available__c</name>
+    </fields>
+    <fields>
+        <help><!-- The quantity physically in stock that are allocated to confirmed outbound Orders. --></help>
+        <label><!-- Qty Committed --></label>
+        <name>Qty_Committed__c</name>
+    </fields>
+    <fields>
+        <help><!-- The quantity not yet physically in stock, but that is expected on a confirmed inbound Order. --></help>
+        <label><!-- Qty On-Order --></label>
+        <name>Qty_On_Order__c</name>
+    </fields>
+    <fields>
+        <help><!-- The quantity physically in stock. --></help>
+        <label><!-- Qty On-hand --></label>
+        <name>Qty_On_hand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Taro Warehouse --></label>
+        <name>Taro_Warehouse__c</name>
+        <relationshipLabel><!-- Taro Inventory --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

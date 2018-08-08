@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Taro Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Taro Orders</value>
+    </caseValues>
+    <fields>
+        <label><!-- Completed Order Line items --></label>
+        <name>Completed_Order_Line_items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Order --></label>
+        <name>Date_of_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Destination Location --></label>
+        <name>Destination_Location__c</name>
+        <relationshipLabel><!-- Taro Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Destination Warehouse --></label>
+        <name>Destination_Warehouse__c</name>
+        <relationshipLabel><!-- Taro Orders (Destination Warehouse) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expected Delivery Date --></label>
+        <name>Expected_Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Line Items --></label>
+        <name>Number_of_Line_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Location --></label>
+        <name>Source_Location__c</name>
+        <relationshipLabel><!-- Taro Orders (Source Location) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Source Warehouse --></label>
+        <name>Source_Warehouse__c</name>
+        <relationshipLabel><!-- Taro Orders (Source Warehouse) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation>Cancelled</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Completed</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmed</masterLabel>
+            <translation>Confirmed</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation>Draft</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Qty Delivered --></label>
+        <name>Total_Qty_Delivered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Qty Ordered --></label>
+        <name>Total_Qty_Ordered__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Purchase Order --></label>
+        <name>Purchase_Order</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sales Order --></label>
+        <name>Sales_Order</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Transfer Order --></label>
+        <name>Transfer_Order</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

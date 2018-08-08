@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Header level information for internal or external orders that will result in inventory movements once status is Completed.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Completed_Order_Line_items__c</fullName>
+        <description>Total number of order line items completed for the order.</description>
+        <externalId>false</externalId>
+        <label>Completed Order Line items</label>
+        <summaryForeignKey>Taro_Order_Line_item__c.Taro_Order__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Order__c</fullName>
+        <description>The date the order was created.</description>
+        <externalId>false</externalId>
+        <label>Date of Order</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Destination_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The geographical location of the destination warehouse.</description>
+        <externalId>false</externalId>
+        <label>Destination Location</label>
+        <referenceTo>Taro_Location__c</referenceTo>
+        <relationshipLabel>Taro Orders</relationshipLabel>
+        <relationshipName>Taro_Orders</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Destination_Warehouse__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The warehouse where the order is going.</description>
+        <externalId>false</externalId>
+        <label>Destination Warehouse</label>
+        <referenceTo>Taro_Warehouse__c</referenceTo>
+        <relationshipLabel>Taro Orders (Destination Warehouse)</relationshipLabel>
+        <relationshipName>Taro_Orders1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Delivery_Date__c</fullName>
+        <description>The date that the order is planned to be delivered.</description>
+        <externalId>false</externalId>
+        <label>Expected Delivery Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Line_Items__c</fullName>
+        <description>Number of order line items on the order.</description>
+        <externalId>false</externalId>
+        <label>Number of Line Items</label>
+        <summaryForeignKey>Taro_Order_Line_item__c.Taro_Order__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Source_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The geographical location of the source warehouse.</description>
+        <externalId>false</externalId>
+        <label>Source Location</label>
+        <referenceTo>Taro_Location__c</referenceTo>
+        <relationshipLabel>Taro Orders (Source Location)</relationshipLabel>
+        <relationshipName>Taro_Orders1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Warehouse__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The warehouse where the order is being sourced.</description>
+        <externalId>false</externalId>
+        <label>Source Warehouse</label>
+        <referenceTo>Taro_Warehouse__c</referenceTo>
+        <relationshipLabel>Taro Orders (Source Warehouse)</relationshipLabel>
+        <relationshipName>Taro_Orders</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Indicates the progress of the order. When a order reaches a completed or cancelled status no further action can be taken on the order.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Qty_Delivered__c</fullName>
+        <description>Total quantity of product delivered across all line items for the order.</description>
+        <externalId>false</externalId>
+        <label>Total Qty Delivered</label>
+        <summarizedField>Taro_Order_Line_item__c.Qty_Delivered__c</summarizedField>
+        <summaryForeignKey>Taro_Order_Line_item__c.Taro_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Qty_Ordered__c</fullName>
+        <description>Total quantity of product ordered across all line items for the order.</description>
+        <externalId>false</externalId>
+        <label>Total Qty Ordered</label>
+        <summarizedField>Taro_Order_Line_item__c.Qty_Ordered__c</summarizedField>
+        <summaryForeignKey>Taro_Order_Line_item__c.Taro_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <label>Taro Order</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ORD-{0000}</displayFormat>
+        <label>Order ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Taro Orders</pluralLabel>
+    <recordTypes>
+        <fullName>Purchase_Order</fullName>
+        <active>true</active>
+        <description>An order that results in the increase of inventory at a destination location once the status is completed.</description>
+        <label>Purchase Order</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales_Order</fullName>
+        <active>true</active>
+        <description>An order that results in the relieving of inventory from a source location once the status is completed.</description>
+        <label>Sales Order</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Transfer_Order</fullName>
+        <active>true</active>
+        <description>An internal order that results in inventory movement from a source location to a destination location once the status is completed.</description>
+        <label>Transfer Order</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Information about a specific product on an order, such as the quantity ordered and quantity received.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Destination_Inventory__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Inventory where the product should be delivered.</description>
+        <externalId>false</externalId>
+        <label>Destination Inventory</label>
+        <referenceTo>Taro_Inventory__c</referenceTo>
+        <relationshipLabel>Taro Order Line items (Destination Inventory)</relationshipLabel>
+        <relationshipName>Taro_Order_Line_items</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_Qty_Delivered__c</fullName>
+        <description>Quantity received last against this order line item.</description>
+        <externalId>false</externalId>
+        <label>Last Qty Delivered</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The product ordered.</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Taro Order Line items</relationshipLabel>
+        <relationshipName>Taro_Order_Line_items</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Qty_Delivered__c</fullName>
+        <description>Quantity of product that has been delivered.</description>
+        <externalId>false</externalId>
+        <label>Qty Delivered</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Qty_Ordered__c</fullName>
+        <description>Quantity of product that has been ordered.</description>
+        <externalId>false</externalId>
+        <label>Qty Ordered</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Qty_Outstanding__c</fullName>
+        <description>Quantity that was ordered but not delivered.</description>
+        <externalId>false</externalId>
+        <formula>Qty_Ordered__c  -  Qty_Delivered__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Qty Outstanding</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shorted_Delivery_Reason__c</fullName>
+        <description>Reason for the shorted delivery</description>
+        <externalId>false</externalId>
+        <label>Shorted Delivery Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Test1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Shorted_Delivery__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If the order line item is complete and the quantity delivered is less than the quantity ordered, it is a shorted delivery.</description>
+        <externalId>false</externalId>
+        <label>Shorted Delivery</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Inventory__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Inventory where order will be fulfilled from.</description>
+        <externalId>false</externalId>
+        <label>Source Inventory</label>
+        <referenceTo>Taro_Inventory__c</referenceTo>
+        <relationshipLabel>Taro Order Line items (Source Inventory)</relationshipLabel>
+        <relationshipName>Taro_Order_Line_items1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Indicates the progress of the order line item. When a order line item reaches a completed or cancelled status no further action can be taken on that line item.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Taro_Order__c</fullName>
+        <description>The order that the order line item belongs to.</description>
+        <externalId>false</externalId>
+        <label>Taro Order</label>
+        <referenceTo>Taro_Orders__c</referenceTo>
+        <relationshipLabel>Taro Order Line items</relationshipLabel>
+        <relationshipName>Taro_Order_Line_items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Taro Order Line item</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>LI-{0000}</displayFormat>
+        <label>Order Line Item ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Taro Order Line items</pluralLabel>
+    <recordTypes>
+        <fullName>Purchase_Order</fullName>
+        <active>true</active>
+        <description>When a quantity is received against a Purchase Order line item, the associated destination inventory is increased.</description>
+        <label>Purchase Order</label>
+        <picklistValues>
+            <picklist>Shorted_Delivery_Reason__c</picklist>
+            <values>
+                <fullName>Test1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales_Order</fullName>
+        <active>true</active>
+        <description>When a quantity is received against a Sales Order line item, the associated source inventory is relieved.</description>
+        <label>Sales Order</label>
+        <picklistValues>
+            <picklist>Shorted_Delivery_Reason__c</picklist>
+            <values>
+                <fullName>Test1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Transfer_Order</fullName>
+        <active>true</active>
+        <description>When a quantity is received against a Transfer Order line item, the associated source inventory is relieved and destination inventory increased.</description>
+        <label>Transfer Order</label>
+        <picklistValues>
+            <picklist>Shorted_Delivery_Reason__c</picklist>
+            <values>
+                <fullName>Test1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

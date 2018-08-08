@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Taro Inventory Movement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Taro Inventory Movement</value>
+    </caseValues>
+    <fields>
+        <label><!-- Adjustment Qty --></label>
+        <name>Adjustment_Qty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inventory Adjustment --></label>
+        <name>Inventory_Adjustment__c</name>
+        <relationshipLabel><!-- Taro Inventory Movement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Inventory --></label>
+        <name>Inventory__c</name>
+        <relationshipLabel><!-- Taro Inventory Movement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reason Code --></label>
+        <name>Reason_Code__c</name>
+        <picklistValues>
+            <masterLabel>Product Damaged</masterLabel>
+            <translation>Product Damaged</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Found</masterLabel>
+            <translation>Product Found</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Lost</masterLabel>
+            <translation>Product Lost</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quantities</masterLabel>
+            <translation>Quantities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received Incorrect</masterLabel>
+            <translation>Received Incorrect</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+        <picklistValues>
+            <masterLabel>Archived Movements</masterLabel>
+            <translation>Archived Movements</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cycle Count</masterLabel>
+            <translation>Cycle Count</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inventory Adjustment</masterLabel>
+            <translation>Inventory Adjustment</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Order</masterLabel>
+            <translation>Purchase Order</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Order</masterLabel>
+            <translation>Sales Order</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer Order</masterLabel>
+            <translation>Transfer Order</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Taro Order Line Item --></label>
+        <name>Taro_Order_Line_Item__c</name>
+        <relationshipLabel><!-- Taro Inventory Movement --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
