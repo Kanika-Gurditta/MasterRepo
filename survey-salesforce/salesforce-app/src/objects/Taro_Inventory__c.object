@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>An inventory contains information about a product in a particular warehouse, such as inventory levels.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The product for this inventory.</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Taro Inventory</relationshipLabel>
+        <relationshipName>Taro_Inventory</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Qty_Available__c</fullName>
+        <description>The quantity physically in stock that has not already been committed on a Confirmed outbound Order.</description>
+        <externalId>false</externalId>
+        <formula>Qty_On_hand__c  -  Qty_Committed__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The quantity physically in stock that has not already been committed on a Confirmed outbound Order.</inlineHelpText>
+        <label>Qty Available</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Qty_Committed__c</fullName>
+        <description>The quantity physically in stock that are allocated to confirmed outbound Orders.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The quantity physically in stock that are allocated to confirmed outbound Orders.</inlineHelpText>
+        <label>Qty Committed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Qty_On_Order__c</fullName>
+        <description>The quantity not yet physically in stock, but that is expected on a confirmed inbound Order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The quantity not yet physically in stock, but that is expected on a confirmed inbound Order.</inlineHelpText>
+        <label>Qty On-Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Qty_On_hand__c</fullName>
+        <description>The quantity physically in stock.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The quantity physically in stock.</inlineHelpText>
+        <label>Qty On-hand</label>
+        <summarizedField>Taro_Inventory_Movement__c.Adjustment_Qty__c</summarizedField>
+        <summaryForeignKey>Taro_Inventory_Movement__c.Inventory__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Taro_Warehouse__c</fullName>
+        <description>The warehouse the product is stored in.</description>
+        <externalId>false</externalId>
+        <label>Taro Warehouse</label>
+        <referenceTo>Taro_Warehouse__c</referenceTo>
+        <relationshipLabel>Taro Inventory</relationshipLabel>
+        <relationshipName>Taro_Inventory</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Taro Inventory</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>INV-{0000}</displayFormat>
+        <label>Inventory ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Taro Inventory</pluralLabel>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>
