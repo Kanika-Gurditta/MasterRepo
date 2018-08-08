@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaroWorks Enterprise</fullName>
+    <types>
+        <members>TaroWorks_Enterprise</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Inventory_Adjustment__c</members>
+        <members>Taro_Inventory__c</members>
+        <members>Taro_Inventory_Movement__c</members>
+        <members>Taro_Location__c</members>
+        <members>Taro_Orders__c</members>
+        <members>Taro_Order_Line_item__c</members>
+        <members>Taro_Warehouse__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Inventory_Adjustment__c-en_US</members>
+        <members>Taro_Inventory__c-en_US</members>
+        <members>Taro_Inventory_Movement__c-en_US</members>
+        <members>Taro_Location__c-en_US</members>
+        <members>Taro_Order_Line_item__c-en_US</members>
+        <members>Taro_Orders__c-en_US</members>
+        <members>Taro_Warehouse__c-en_US</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>Inventory_Adjustment__c</members>
+        <members>Taro_Location__c</members>
+        <members>Taro_Order_Line_item__c</members>
+        <members>Taro_Orders__c</members>
+        <members>Taro_Warehouse__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Inventory_Adjustment__c.Adjustment_Qty__c</members>
+        <members>Inventory_Adjustment__c.Adjustment_Reason__c</members>
+        <members>Inventory_Adjustment__c.Date__c</members>
+        <members>Inventory_Adjustment__c.Inventory__c</members>
+        <members>Inventory_Adjustment__c.Cycle_Count_Reason__c</members>
+        <members>Taro_Inventory__c.Taro_Warehouse__c</members>
+        <members>Taro_Inventory__c.Product__c</members>
+        <members>Taro_Inventory__c.Qty_Available__c</members>
+        <members>Taro_Inventory__c.Qty_Committed__c</members>
+        <members>Taro_Inventory__c.Qty_On_hand__c</members>
+        <members>Taro_Inventory__c.Qty_On_Order__c</members>
+        <members>Taro_Inventory_Movement__c.Adjustment_Qty__c</members>
+        <members>Taro_Inventory_Movement__c.Inventory__c</members>
+        <members>Taro_Inventory_Movement__c.Source__c</members>
+        <members>Taro_Inventory_Movement__c.Taro_Order_Line_Item__c</members>
+        <members>Taro_Inventory_Movement__c.Date__c</members>
+        <members>Taro_Inventory_Movement__c.Reason_Code__c</members>
+        <members>Taro_Inventory_Movement__c.Comments__c</members>
+        <members>Taro_Inventory_Movement__c.Inventory_Adjustment__c</members>
+        <members>Taro_Location__c.Taro_Location_ID__c</members>
+        <members>Taro_Location__c.Parent_Location__c</members>
+        <members>Taro_Orders__c.Date_of_Order__c</members>
+        <members>Taro_Orders__c.Destination_Location__c</members>
+        <members>Taro_Orders__c.Source_Location__c</members>
+        <members>Taro_Orders__c.Source_Warehouse__c</members>
+        <members>Taro_Orders__c.Destination_Warehouse__c</members>
+        <members>Taro_Orders__c.Status__c</members>
+        <members>Taro_Orders__c.Expected_Delivery_Date__c</members>
+        <members>Taro_Orders__c.Number_of_Line_Items__c</members>
+        <members>Taro_Orders__c.Total_Qty_Ordered__c</members>
+        <members>Taro_Orders__c.Total_Qty_Delivered__c</members>
+        <members>Taro_Orders__c.Completed_Order_Line_items__c</members>
+        <members>Taro_Order_Line_item__c.Destination_Inventory__c</members>
+        <members>Taro_Order_Line_item__c.Source_Inventory__c</members>
+        <members>Taro_Order_Line_item__c.Status__c</members>
+        <members>Taro_Order_Line_item__c.Taro_Order__c</members>
+        <members>Taro_Order_Line_item__c.Qty_Delivered__c</members>
+        <members>Taro_Order_Line_item__c.Qty_Ordered__c</members>
+        <members>Taro_Order_Line_item__c.Qty_Outstanding__c</members>
+        <members>Taro_Order_Line_item__c.Product__c</members>
+        <members>Taro_Order_Line_item__c.Last_Qty_Delivered__c</members>
+        <members>Taro_Order_Line_item__c.Shorted_Delivery__c</members>
+        <members>Taro_Order_Line_item__c.Shorted_Delivery_Reason__c</members>
+        <members>Taro_Warehouse__c.Taro_Warehouse_ID__c</members>
+        <members>Taro_Warehouse__c.Taro_Location__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>TaroWorks_Enterprise</members>
+        <members>TaroWorks_Enterprise/TaroWorks_Enterprise_Logo.png</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>Inventory_Adjustment__c-Cycle Count Page Layout</members>
+        <members>Inventory_Adjustment__c-Inventory Adjustment Page Layout</members>
+        <members>Taro_Inventory__c-Taro Inventory Layout</members>
+        <members>Taro_Inventory_Movement__c-Taro Inventory Movement Layout</members>
+        <members>Taro_Location__c-Taro Location Layout</members>
+        <members>Taro_Order_Line_item__c-Transfer Order Line Item Layout</members>
+        <members>Taro_Orders__c-Transfer Order Page Layout</members>
+        <members>Taro_Warehouse__c-Taro Warehouse Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Inventory_Adjustment__c.Cycle_Count</members>
+        <members>Taro_Orders__c.Sales_Order</members>
+        <members>Taro_Orders__c.Transfer_Order</members>
+        <members>Inventory_Adjustment__c.Inventory_Adjustment</members>
+        <members>Taro_Order_Line_item__c.Purchase_Order</members>
+        <members>Taro_Order_Line_item__c.Sales_Order</members>
+        <members>Taro_Order_Line_item__c.Transfer_Order</members>
+        <members>Taro_Orders__c.Purchase_Order</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>Taro_Orders__c.All</members>
+        <members>Taro_Warehouse__c.All</members>
+        <members>Inventory_Adjustment__c.All</members>
+        <members>Taro_Location__c.All</members>
+        <members>Taro_Order_Line_item__c.All</members>
+        <members>Taro_Inventory__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>TaroWorks User</members>
+        <name>Profile</name>
+    </types>
+    <version>36.0</version>
+</Package>
